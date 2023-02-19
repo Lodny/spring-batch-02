@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.8:3306/study_juice
+    password: mysql
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    hibernate:
+      ddl-auto: update
+  batch:
+    job:
+      names: ${job.name:NONE}
+---
+logging:
+  level:
+    root: info
+    com.psc.sample: debug
